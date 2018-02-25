@@ -6,12 +6,12 @@ config :logger, level: :debug
 
 config :quantum_test, QuantumTest.Scheduler,
   jobs: [
-    mix_task: [
-      schedule: "* * * * *",
-      task: {Mix.Tasks.QuantumTest.WriteTime, :run, ["Hello"]},
+    custom_task: [
+      schedule: "*/4 * * * *",
+      task: fn -> File.write("tmp/task.txt", "#{Timex.now}", [:append]) end
     ],
     application_task: [
-      schedule: "*/5 * * * *",
+      schedule: "*/2 * * * *",
       task: {QuantumTest, :app_task, []}
     ]
   ]
