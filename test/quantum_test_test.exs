@@ -1,8 +1,8 @@
-defmodule QuantumTestTest do
+defmodule QuantumExampleTest do
   use ExUnit.Case
-  doctest QuantumTest
+  doctest QuantumExample
 
   test "greets the world" do
-    assert QuantumTest.hello() == :world
+    assert QuantumExample.hello() == :world
   end
 end

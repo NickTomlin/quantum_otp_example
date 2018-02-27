@@ -1,14 +1,14 @@
-defmodule QuantumTest do
+defmodule QuantumExample do
   use Application
 
   def start(_type, _args) do
     import Supervisor.Spec
 
     children = [
-      worker(QuantumTest.Scheduler, [])
+      worker(QuantumExample.Scheduler, [])
     ]
 
-    opts = [strategy: :one_for_one, name: QuantumTest.Supervisor]
+    opts = [strategy: :one_for_one, name: QuantumExample.Supervisor]
 
     Supervisor.start_link(children, opts)
   end

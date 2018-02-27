@@ -1,21 +1,12 @@
-# QuantumTest
+# QuantumExample
 
-**TODO: Add description**
+An example using [quantum](https://github.com/c-rack/quantum-elixir) in a simple OTP application.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `quantum_test` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:quantum_test, "~> 0.1.0"}
-  ]
-end
 ```
+mix deps.get
+# start as non interactive process
+mix run --no-halt
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/quantum_test](https://hexdocs.pm/quantum_test).
-
+# start a repl
+iex -S mix
+```

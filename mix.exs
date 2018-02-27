@@ -1,9 +1,9 @@
-defmodule QuantumTest.MixProject do
+defmodule QuantumExample.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :quantum_test,
+      app: :quantum_example,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
@@ -14,7 +14,7 @@ defmodule QuantumTest.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {QuantumTest, []},
+      mod: {QuantumExample, []},
       extra_applications: [:logger]
     ]
   end

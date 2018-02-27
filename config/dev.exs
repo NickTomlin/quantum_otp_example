@@ -4,7 +4,7 @@ use Mix.Config
 
 config :logger, level: :debug
 
-config :quantum_test, QuantumTest.Scheduler,
+config :quantum_example, QuantumExample.Scheduler,
   jobs: [
     custom_task: [
       schedule: "*/4 * * * *",
@@ -12,6 +12,6 @@ config :quantum_test, QuantumTest.Scheduler,
     ],
     application_task: [
       schedule: "*/2 * * * *",
-      task: {QuantumTest, :app_task, []}
+      task: {QuantumExample, :app_task, []}
     ]
   ]
